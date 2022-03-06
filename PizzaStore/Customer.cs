@@ -6,20 +6,23 @@ namespace PizzaStore
         int _customerNumber;
         string _firstName;
         string _lastName;
+        string _address;
+        string _postcode;
+        string _city;
         string _email;
         string _phoneNumber;
-        Order _order;
 
 
 
-        public Customer(int customerNumber, string firstName, string lastName, string email, string phoneNumber, Order order)
+        public Customer(string firstName, string lastName, string address, string postcode, string city, string email, string phoneNumber)
         {
-            _customerNumber = customerNumber;
             _firstName = firstName;
             _lastName = lastName;
+            _address = address;
+            _postcode = postcode;
+            _city = city;
             _email = email;
             _phoneNumber = phoneNumber;
-            _order = order;
         }
 
         public string FirstName
@@ -32,6 +35,24 @@ namespace PizzaStore
         {
             get { return _lastName; }
             set { _lastName = value; }
+        }
+
+        public string Address
+        {
+            get { return _address; }
+            set { _address = value; }
+        }
+
+        public string Postcode
+        {
+            get { return _postcode; }
+            set { _postcode = value; }
+        }
+
+        public string City
+        {
+            get { return _city; }
+            set { _city = value; }
         }
 
         public string Email
@@ -49,7 +70,7 @@ namespace PizzaStore
         public override string ToString()
         {
 
-            return $"Customer {_customerNumber}: \n\nFull Name: {_firstName} {_lastName} \nEmail: {_email} \nPhone {_phoneNumber} \n\n{_order}";
+            return $"\nOplysninger: \n\n{FirstName} {LastName} \n{Address} \n{Postcode} {City} \n{Email} \n{PhoneNumber}";
         }
     }
 }

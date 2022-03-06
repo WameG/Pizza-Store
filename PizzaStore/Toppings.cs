@@ -7,11 +7,10 @@ namespace PizzaStore
         int _price;
         int _quantity;
 
-        public Toppings()
+        public Toppings(string name, int price)
         {
-            _name = "";
-            _price = 0;
-            _quantity = 0;
+            _name = name;
+            _price = price;
         }
 
         public string Name
@@ -34,7 +33,7 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"{Quantity} - Name: {Name} - Price: {Price}";
+            return $"{Name}                        (+{Price} kr.)";
         }
     }
 }

@@ -8,7 +8,7 @@ namespace PizzaStore
         int _price;
         int _quantity;
 
-        public Pizza(string name, int price, int quantity)
+        public Pizza(int quantity, string name, int price)
         {
             _name = name;
             _price = price;
@@ -36,7 +36,7 @@ namespace PizzaStore
 
         public override string ToString()
         {
-            return $"Quantity: {Quantity} - Name: {Name} - Price: {Price} kr.";
+            return $"\n{Quantity}             {Name}              {Price} kr.";
         }
 
     }

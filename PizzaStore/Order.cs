@@ -5,26 +5,27 @@ namespace PizzaStore
     {
         string _orderNumber;
         double _tax;
-        double _deliveryCost;
         Pizza _pizza;
+        Toppings _toppings;
+        Delivery _delivery;
 
-        public Order(string orderNumber, Pizza pizza)
+        public Order(string orderNumber, Pizza pizza, Toppings toppings)
         {
             _orderNumber = orderNumber;
-            _pizza = pizza;
             _tax = 1.25;
-            _deliveryCost = 40;
-
+            _delivery = new Delivery();
+            _pizza = new Pizza(pizza.Quantity, pizza.Name, pizza.Price);
+            _toppings = new Toppings(toppings.Name, toppings.Price);
         }
 
         public double CalculateTotalPrice()
         {
-            return (_pizza.Price + _deliveryCost) * _tax;
+            return (_pizza.Price + _toppings.Price + _delivery.Price) * _tax;
         }
 
         public override string ToString()
         {
-            return $"Order Details: \n\n{_pizza} \nTotal Price: {CalculateTotalPrice()} \nOrder Number: {_orderNumber}";
+            return $"Total Price                      {CalculateTotalPrice()} kr. \nYour ordernumber                   {_orderNumber}";
 
         }
     }
