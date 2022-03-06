@@ -3,21 +3,21 @@ namespace PizzaStore
 {
     public class Payment
     {
-        string _name;
+        string _paymentMethod;
 
-        public Payment(string name)
+        public Payment(string paymentMethod)
         {
-            _name = name;
+            _paymentMethod = paymentMethod;
         }
 
-        public string Name
+        public string Payment_Method
         {
-            get { return _name; }
+            get { return _paymentMethod; }
         }
 
         public override string ToString()
         {
-            return $"Payment Method                 ({Name})";
+            return $"Payment Method                 ({Payment_Method})";
         }
     }
 }
