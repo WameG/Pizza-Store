@@ -26,7 +26,6 @@ namespace PizzaStore
             Order order2 = new Order("7K9QKF", pizza2, toppings2, payment2);
             Order order3 = new Order("4F3HFT", pizza3, toppings3, payment3);
 
-
             Console.WriteLine("------------------------------------------");
             Console.WriteLine("Customer (#1)");
             Console.WriteLine($"{pizza1}");

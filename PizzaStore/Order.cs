@@ -13,8 +13,8 @@ namespace PizzaStore
         public Order(string orderNumber, Pizza pizza, Toppings toppings, Payment payment)
         {
             _orderNumber = orderNumber;
-            _tax = 1.25;
-            _deliveryCost = 38;
+            _tax = 1.03;
+            _deliveryCost = 40;
             _pizza = new Pizza(pizza.Quantity, pizza.Name, pizza.Price);
             _toppings = new Toppings(toppings.Name, toppings.Price);
             _payment = new Payment(payment.Payment_Method);
